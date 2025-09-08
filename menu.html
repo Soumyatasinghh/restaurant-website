@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Savory Bites | Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="font-sans bg-gray-100 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-black text-white fixed w-full z-10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-yellow-600">
+                <span class="text-yellow-600">Savory</span> Bites
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-yellow-600 transition">Home</a>
+                <a href="menu.html" class="hover:text-yellow-600 transition">Menu</a>
+                <a href="reservations.html" class="hover:text-yellow-600 transition">Reservations</a>
+                <a href="events.html" class="hover:text-yellow-600 transition">Events</a>
+                <a href="contact.html" class="hover:text-yellow-600 transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-black pb-4 px-6">
+            <a href="index.html" class="block py-2 hover:text-yellow-600 transition">Home</a>
+            <a href="menu.html" class="block py-2 hover:text-yellow-600 transition">Menu</a>
+            <a href="reservations.html" class="block py-2 hover:text-yellow-600 transition">Reservations</a>
+            <a href="events.html" class="block py-2 hover:text-yellow-600 transition">Events</a>
+            <a href="contact.html" class="block py-2 hover:text-yellow-600 transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-gray-100 pt-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Our Menu</h2>
+
+            <!-- Menu Tabs -->
+            <div class="flex justify-center mb-12 border-b border-gray-300">
+                <button class="px-6 py-3 font-medium active-tab" onclick="showMenuCategory('starters')">Starters</button>
+                <button class="px-6 py-3 font-medium" onclick="showMenuCategory('mains')">Main Courses</button>
+                <button class="px-6 py-3 font-medium" onclick="showMenuCategory('desserts')">Desserts</button>
+                <button class="px-6 py-3 font-medium" onclick="showMenuCategory('drinks')">Drinks</button>
+            </div>
+
+            <!-- Starters -->
+            <div id="starters-menu" class="menu-category grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\paneer-tikka.jpg.png" alt="Paneer Tikka" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Paneer Tikka</h3>
+                        <p class="text-gray-600 mb-4">Grilled cottage cheese with spices</p>
+                        <span class="text-yellow-600 font-bold">₹250</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\veg-samosa.jpg.png" alt="Veg Samosa" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Veg Samosa</h3>
+                        <p class="text-gray-600 mb-4">Crispy pastry stuffed with spiced potatoes</p>
+                        <span class="text-yellow-600 font-bold">₹120</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\papdi-chaat.jpg.png" alt="Papdi Chaat" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Papdi Chaat</h3>
+                        <p class="text-gray-600 mb-4">Tangy and spicy street-style chaat</p>
+                        <span class="text-yellow-600 font-bold">₹150</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\aloo-chaat.jpg.png" alt="Papdi Chaat" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Aloo Chaat</h4>
+                        <p class="text-gray-600 mb-4">Crispy potato cubes tossed with tangy chaat spices, pomegranate, and mint chutney</p>
+                        <span class="text-yellow-600 font-bold">₹200</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\prawn-tempura.jpg.png" alt="Papdi Chaat" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h5 class="text-xl font-semibold mb-2">Prawn Tempura</h5>
+                        <p class="text-gray-600 mb-4">Lightly battered prawns served with zesty dipping sauce</p>
+                        <span class="text-yellow-600 font-bold">₹400</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\stuffed-mushrooms.jpg.png" alt="Papdi Chaat" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h6 class="text-xl font-semibold mb-2">Stuffed Mushrooms</h6>
+                        <p class="text-gray-600 mb-4">Button mushrooms filled with spiced cheese and herbs, baked to perfection</p>
+                        <span class="text-yellow-600 font-bold">₹280</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mains -->
+            <div id="mains-menu" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\butter-chicken.jpg.png" alt="Butter Chicken" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Butter Chicken</h3>
+                        <p class="text-gray-600 mb-4">Creamy tomato-based chicken curry</p>
+                        <span class="text-yellow-600 font-bold">₹350</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\panner-butter-masala.jpg.png" alt="Paneer Butter Masala" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Paneer Butter Masala</h3>
+                        <p class="text-gray-600 mb-4">Cottage cheese in rich tomato gravy</p>
+                        <span class="text-yellow-600 font-bold">₹300</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\vegetable-biryani.jpg.png" alt="Biryani" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Vegetable Biryani</h3>
+                        <p class="text-gray-600 mb-4">Aromatic basmati rice with vegetables and spices</p>
+                        <span class="text-yellow-600 font-bold">₹280</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\dal-makhani.jpg.png" alt="Paneer Butter Masala" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Dal Makhani</h4>
+                        <p class="text-gray-600 mb-4">Slow-cooked black lentils in a creamy, buttery sauce with a touch of spice</p>
+                        <span class="text-yellow-600 font-bold">₹300</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\chole-bhature.jpg" alt="Paneer Butter Masala" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h5 class="text-xl font-semibold mb-2">Chole Bhature</h5>
+                        <p class="text-gray-600 mb-4">Spicy chickpea curry paired with fluffy deep-fried bhature</p>
+                        <span class="text-yellow-600 font-bold">₹390</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\fish-curry.jpg.png" alt="Paneer Butter Masala" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h6 class="text-xl font-semibold mb-2">Fish Curry</h6>
+                        <p class="text-gray-600 mb-4">Fresh fish fillets simmered in a tangy coconut and mustard-based sauce</p>
+                        <span class="text-yellow-600 font-bold">₹460</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div id="desserts-menu" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\gulab-jamun.jpg.png" alt="Gulab Jamun" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h1 class="text-xl font-semibold mb-2">Gulab Jamun</h1>
+                        <p class="text-gray-600 mb-4">Soft milk-based dumplings in sugar syrup</p>
+                        <span class="text-yellow-600 font-bold">₹120</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\rasgulla.jpg.png" alt="Rasgulla" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold mb-2">Rasgulla</h2>
+                        <p class="text-gray-600 mb-4">Soft spongy cheese balls in sugar syrup</p>
+                        <span class="text-yellow-600 font-bold">₹100</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\mango-mousse.jpg.png" alt="Rasgulla" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Mango Mousse</h3>
+                        <p class="text-gray-600 mb-4">Smooth, creamy mango dessert topped with fresh fruit pieces</p>
+                        <span class="text-yellow-600 font-bold">₹220</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\rabri.jpg.png" alt="Rasgulla" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Rabri</h4>
+                        <p class="text-gray-600 mb-4">Thickened sweetened milk flavored with saffron, cardamom, and nuts</p>
+                        <span class="text-yellow-600 font-bold">₹180</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\jalebi.jpg.png" alt="Rasgulla" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h5 class="text-xl font-semibold mb-2">Jalebi</h5>
+                        <p class="text-gray-600 mb-4">Crispy, spiral-shaped sweets soaked in saffron-infused sugar syrup</p>
+                        <span class="text-yellow-600 font-bold">₹120</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\brownie-icecream.jpg" alt="Rasgulla" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h6 class="text-xl font-semibold mb-2">Chocolate Brownie with Ice Cream</h6>
+                        <p class="text-gray-600 mb-4">Warm chocolate brownie served with vanilla ice cream and chocolate drizzle</p>
+                        <span class="text-yellow-600 font-bold">₹250</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drinks -->
+            <div id="drinks-menu" class="menu-category hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\masala-chai.jpg" alt="Masala Chai" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h1 class="text-xl font-semibold mb-2">Masala Chai</h1>
+                        <p class="text-gray-600 mb-4">Traditional Indian spiced tea</p>
+                        <span class="text-yellow-600 font-bold">₹50</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\lassi.jpg" alt="Lassi" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold mb-2">Lassi</h2>
+                        <p class="text-gray-600 mb-4">Refreshing yogurt-based drink with sugar</p>
+                        <span class="text-yellow-600 font-bold">₹60</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\cold-coffee.jpg" alt="Lassi" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Cold Coffee</h3>
+                        <p class="text-gray-600 mb-4">Chilled coffee served with milk, sugar, and optionally ice cream</p>
+                        <span class="text-yellow-600 font-bold">₹140</span>
+                    </div>
+                </div>
+                 <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\masala-lemonade.jpg" alt="Lassi" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Masala Lemonade</h4>
+                        <p class="text-gray-600 mb-4">Tangy lemonade infused with Indian spices for a zesty twist</p>
+                        <span class="text-yellow-600 font-bold">₹140</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\filter-coffee.jpg" alt="Lassi" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h5 class="text-xl font-semibold mb-2">Filter Coffee</h5>
+                        <p class="text-gray-600 mb-4">South Indian-style strong coffee with rich aroma and frothy milk</p>
+                        <span class="text-yellow-600 font-bold">₹100</span>
+                    </div>
+                </div>
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\mocktail.jpg" alt="Lassi" class="w-full h-48 object-cover" />
+                    <div class="p-6">
+                        <h6 class="text-xl font-semibold mb-2">Mocktails</h6>
+                        <p class="text-gray-600 mb-4">Non-alcoholic cocktails such as Mojito, Sunrise, or Tropical Punch</p>
+                        <span class="text-yellow-600 font-bold">₹180-₹250</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+     <footer class="bg-black text-white py-6 mt-12 text-center">
+        <p>&copy; 2025 Savory Bites. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Hamburger menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tabs functionality
+        function showMenuCategory(category) {
+            const categories = ['starters', 'mains', 'desserts', 'drinks'];
+            categories.forEach(cat => {
+                const el = document.getElementById(cat + '-menu');
+                if (cat === category) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+
+            // Set active tab
+            const buttons = document.querySelectorAll('.active-tab, .px-6.py-3.font-medium');
+            buttons.forEach(btn => btn.classList.remove('active-tab'));
+            event.currentTarget.classList.add('active-tab');
+        }
+    </script>
+</body>
+</html>

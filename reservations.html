@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Savory Bites | Reservations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="font-sans bg-gray-100 text-gray-800">
+
+<!-- Navigation -->
+<nav class="bg-black text-white fixed w-full z-10">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold text-yellow-600">
+            <span class="text-yellow-600">Savory</span> Bites
+        </div>
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="hover:text-yellow-600 transition">Home</a>
+            <a href="menu.html" class="hover:text-yellow-600 transition">Menu</a>
+            <a href="reservations.html" class="hover:text-yellow-600 transition">Reservations</a>
+            <a href="events.html" class="hover:text-yellow-600 transition">Events</a>
+            <a href="contact.html" class="hover:text-yellow-600 transition">Contact</a>
+        </div>
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-black pb-4 px-6">
+        <a href="index.html" class="block py-2 hover:text-yellow-600 transition">Home</a>
+        <a href="menu.html" class="block py-2 hover:text-yellow-600 transition">Menu</a>
+        <a href="reservations.html" class="block py-2 hover:text-yellow-600 transition">Reservations</a>
+        <a href="events.html" class="block py-2 hover:text-yellow-600 transition">Events</a>
+        <a href="contact.html" class="block py-2 hover:text-yellow-600 transition">Contact</a>
+    </div>
+</nav>
+
+<!-- Reservations Section -->
+<section id="reservations" class="py-24">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-16 text-gray-800">Book Your Table</h2>
+
+        <div class="max-w-5xl mx-auto md:flex md:space-x-8 bg-white shadow-lg rounded-xl overflow-hidden">
+            <!-- Left: Dining Hours & Contact -->
+            <div class="md:w-1/2 bg-yellow-600 text-white p-10 space-y-8">
+                <h3 class="text-2xl font-bold mb-4">Dining Hours</h3>
+                <div class="space-y-4">
+                    <div class="flex justify-between border-b border-yellow-500 pb-2">
+                        <span>Mon - Thu</span>
+                        <span>10:00 AM - 10:00 PM</span>
+                    </div>
+                    <div class="flex justify-between border-b border-yellow-500 pb-2">
+                        <span>Fri - Sat</span>
+                        <span>10:00 AM - 11:00 PM</span>
+                    </div>
+                    <div class="flex justify-between border-b border-yellow-500 pb-2">
+                        <span>Sunday</span>
+                        <span>11:00 AM - 11:30 PM</span>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold mt-8 mb-4">Contact</h3>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>(+91) 92308 45673</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-envelope"></i>
+                        <span>reservations@savorybites.com</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>47 Central Avenue, Kolkata, India</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Reservation Form -->
+            <div class="md:w-1/2 p-10 bg-gray-50">
+                <form id="reservation-form" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-600 focus:outline-none" required />
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-600 focus:outline-none" required />
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-gray-700 mb-2">Phone</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-600 focus:outline-none" required />
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="date" class="block text-gray-700 mb-2">Date</label>
+                            <input type="date" id="date" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-600 focus:outline-none" required />
+                        </div>
+                        <div>
+                            <label for="time" class="block text-gray-700 mb-2">Time</label>
+                            <input type="time" id="time" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-600 focus:outline-none" required />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label for="guests" class="block text-gray-700 mb-2">Guests</label>
+                            <select id="guests" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-600 focus:outline-none" required>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5 People</option>
+                                <option value="6">6 People</option>
+                                <option value="7">7 People</option>
+                                <option value="8">8 People</option>
+                                <option value="9">9+ People</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="occasion" class="block text-gray-700 mb-2">Occasion</label>
+                            <select id="occasion" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-600 focus:outline-none">
+                                <option value="none">None</option>
+                                <option value="birthday">Birthday</option>
+                                <option value="anniversary">Anniversary</option>
+                                <option value="business">Business</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="special-requests" class="block text-gray-700 mb-2">Special Requests</label>
+                        <textarea id="special-requests" rows="3" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-yellow-600 focus:outline-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-3 rounded-lg font-semibold transition duration-300">Reserve Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+  <footer class="bg-black text-white py-6 mt-12 text-center">
+        <p>&copy; 2025 Savory Bites. All rights reserved.</p>
+    </footer>
+
+<!-- JS -->
+<script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+    });
+
+    // Set minimum date for reservation calendar (today)
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('date').min = today;
+
+    // Form submission
+    document.getElementById('reservation-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+        const guests = document.getElementById('guests').value;
+        const occasion = document.getElementById('occasion').value;
+        const requests = document.getElementById('special-requests').value;
+
+        alert(`Thank you, ${name}! Your reservation for ${guests} on ${date} at ${time} has been received. We'll contact you shortly to confirm.`);
+
+        this.reset();
+    });
+</script>
+
+</body>
+</html>

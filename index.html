@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savory Bites | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero">
+    <!-- Background Image -->
+    <img src="C:\Users\Soumyata Singh\OneDrive\Desktop\Restaurant\images\home-hero.jpg.png" alt="Restaurant Background" class="hero-bg">
+
+    <!-- Navbar -->
+    <header>
+      <nav>
+        <h1 class="logo">Savory Bites</h1>
+        <div class="menu-toggle" id="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="reservations.html">Reservations</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <h2>Welcome to Savory Bites</h2>
+      <p>Delicious food made with love</p>
+      <!-- Updated Explore Menu button -->
+      <a href="menu.html">
+        <button class="hero-btn">Explore Menu</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-6 mt-12 text-center">
+        <p>&copy; 2025 Savory Bites. All rights reserved.</p>
+    </footer>
+
+  <!-- JavaScript for Hamburger -->
+  <script>
+    const menuToggle = document.getElementById('mobile-menu');
+    const navList = document.querySelector('.nav-list');
+
+    menuToggle.addEventListener('click', () => {
+      navList.classList.toggle('active');
+      menuToggle.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>    

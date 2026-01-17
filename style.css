@@ -6,23 +6,23 @@
   font-family: Arial, sans-serif;
 }
 
-/* Ensure page content isn't hidden behind the fixed navbar.
-   Adjust the padding if your navbar height differs. */
+/* BODY FIX FOR FIXED NAVBAR */
 body {
-  padding-top: 72px; /* matches nav height (px-6 + line-height). Adjust as needed */
+  padding-top: 80px; /* height of navbar */
 }
 
-/* NAVBAR (kept minimal since markup now uses Tailwind utilities) */
+/* NAVBAR */
 .navbar {
-  /* kept for backward compatibility if referenced elsewhere */
-  position: fixed;
+  position: fixed;          /* FIX */
   top: 0;
+  left: 0;
   width: 100%;
   padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 999;
+  background-color: #000;   /* ensures visibility on all pages */
+  z-index: 10;
 }
 
 .logo {
@@ -38,11 +38,16 @@ body {
   font-size: 16px;
 }
 
+.navbar nav a:hover {
+  color: #e63946;
+}
+
 /* HERO SECTION */
 .hero {
   position: relative;
-  height: calc(100vh - 72px); /* subtract navbar height so hero fits in viewport without overflow */
+  height: 100vh;
   overflow: hidden;
+  margin-top: -80px; /* cancels body padding ONLY for hero */
 }
 
 /* HERO IMAGE */
@@ -76,7 +81,6 @@ body {
   align-items: center;
   text-align: center;
   color: white;
-  padding: 0 1rem;
 }
 
 .hero-content h1 {
@@ -110,3 +114,4 @@ body {
   text-align: center;
   padding: 20px;
 }
+

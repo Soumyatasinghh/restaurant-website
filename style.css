@@ -1,4 +1,3 @@
-
 /* RESET */
 * {
   margin: 0;
@@ -7,16 +6,23 @@
   font-family: Arial, sans-serif;
 }
 
-/* NAVBAR */
+/* Ensure page content isn't hidden behind the fixed navbar.
+   Adjust the padding if your navbar height differs. */
+body {
+  padding-top: 72px; /* matches nav height (px-6 + line-height). Adjust as needed */
+}
+
+/* NAVBAR (kept minimal since markup now uses Tailwind utilities) */
 .navbar {
-  position: absolute;
+  /* kept for backward compatibility if referenced elsewhere */
+  position: fixed;
   top: 0;
   width: 100%;
   padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 5;
+  z-index: 999;
 }
 
 .logo {
@@ -35,7 +41,7 @@
 /* HERO SECTION */
 .hero {
   position: relative;
-  height: 100vh;
+  height: calc(100vh - 72px); /* subtract navbar height so hero fits in viewport without overflow */
   overflow: hidden;
 }
 
@@ -46,7 +52,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* KEY LINE */
+  object-fit: cover;
   z-index: 1;
 }
 
@@ -70,6 +76,7 @@
   align-items: center;
   text-align: center;
   color: white;
+  padding: 0 1rem;
 }
 
 .hero-content h1 {
@@ -95,6 +102,7 @@
 .hero-btn:hover {
   background-color: #c92c3a;
 }
+
 /* FOOTER */
 .footer {
   background-color: #111;

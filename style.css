@@ -7,9 +7,10 @@
 }
 
 /* BODY FIX FOR FIXED NAVBAR */
-body {
-  padding-top: 80px; /* height of navbar */
+.page-content {
+  padding-top: 100px; /* space below fixed navbar */
 }
+
 
 /* NAVBAR */
 .navbar {

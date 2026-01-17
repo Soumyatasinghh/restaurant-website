@@ -2,27 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Restaurant Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Savory Bites | Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="font-sans bg-gray-100 text-gray-800">
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">My Restaurant</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="events.html">Events</a>
-      <a href="reservations.html">Reservations</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <!-- Navigation -->
+  <nav class="bg-black text-white fixed w-full z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold text-yellow-600">
+        <span class="text-yellow-600">Savory</span> Bites
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a href="index.html" class="hover:text-yellow-600 transition">Home</a>
+        <a href="menu.html" class="hover:text-yellow-600 transition">Menu</a>
+        <a href="reservations.html" class="hover:text-yellow-600 transition">Reservations</a>
+        <a href="events.html" class="hover:text-yellow-600 transition">Events</a>
+        <a href="contact.html" class="hover:text-yellow-600 transition">Contact</a>
+      </div>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Toggle mobile menu">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-black pb-4 px-6">
+      <a href="index.html" class="block py-2 hover:text-yellow-600 transition">Home</a>
+      <a href="menu.html" class="block py-2 hover:text-yellow-600 transition">Menu</a>
+      <a href="reservations.html" class="block py-2 hover:text-yellow-600 transition">Reservations</a>
+      <a href="events.html" class="block py-2 hover:text-yellow-600 transition">Events</a>
+      <a href="contact.html" class="block py-2 hover:text-yellow-600 transition">Contact</a>
+    </div>
+  </nav>
 
   <!-- HERO SECTION -->
+  <!-- Note: sections below add top spacing (pt-24/pt-28) on other pages; the CSS below also adds body padding to avoid overlap -->
   <section class="hero">
 
-    <!-- HERO IMAGE (HTML ONLY) -->
+    <!-- HERO IMAGE -->
     <img src="images/home-hero.png" alt="Restaurant Image" class="hero-img">
 
     <!-- OVERLAY CONTENT -->
@@ -38,6 +58,14 @@
   <footer class="footer">
     <p>© 2026 My Restaurant. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Mobile menu toggle (same pattern used on other pages)
+    document.getElementById('mobile-menu-button')?.addEventListener('click', function() {
+      const m = document.getElementById('mobile-menu');
+      if (m) m.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
